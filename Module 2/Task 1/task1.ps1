@@ -58,20 +58,21 @@ Get-Process explorer | Select-Object Name, StartTime
 (get-process WINWORD).Kill()
 
 # 19.	Подсчитать значение выражения S= . N – изменяемый параметр. Каждый шаг выводить в виде строки. (Пример: На шаге 2 сумма S равна 9)
-[int]$n = 10
-[int]$s = 0
+[int]$n = 10;
+[int]$s = 0;
 
 for ($i = 1; $i -le $n; $i++) {
-    $s += 3 * $i
-    Write-Host "Step $i. S equals $s"
+    $s += 3 * $i;
+    Write-Host "Step $i. S equals $s";
 }
 
 # 20.	Напишите функцию для предыдущего задания. Запустите её на выполнение.
 function simple_func ([int] $n) {
-    [int]$s = 0
+    [int]$s = 0;
     for ($i = 1; $i -le $n; $i++) {
-        $s += 3 * $i
-        Write-Host "Step $i. S equals $s"
-    }}
+        $s += 3 * $i;
+        Write-Host "Step $i. S equals $s";
+    }
+}
 
 simple_func(13)
